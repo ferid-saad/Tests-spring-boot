@@ -33,18 +33,21 @@
 
     <!-- Propriétés -->
     <properties>
-        <java.version>23</java.version>
+        <java.version>22</java.version>
     </properties>
 
     <!-- Dépendances communes -->
     <dependencyManagement>
         <dependencies>
             <dependency>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-dependencies</artifactId>
-                <version>3.2.5</version>
-                <type>pom</type>
-                <scope>import</scope>
+                <groupId>org.mockito</groupId>
+                <artifactId>mockito-core</artifactId>
+                <version>5.10.0</version>
+            </dependency>
+            <dependency>
+                <groupId>net.bytebuddy</groupId>
+                <artifactId>byte-buddy</artifactId>
+                <version>1.14.15</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
@@ -52,13 +55,13 @@
     <!-- Plugins -->
     <build>
         <plugins>
-            <!-- Compiler : cible Java 23 -->
+            <!-- Compiler : cible Java 22 -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
                 <version>3.11.0</version>
                 <configuration>
-                    <release>23</release>
+                    <release>22</release>
                 </configuration>
             </plugin>
 
